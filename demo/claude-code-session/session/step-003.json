@@ -1,0 +1,163 @@
+{
+  "persona": {
+    "name": "Maya Chen",
+    "role": "Office manager choosing a helpdesk tool for a nine-person company",
+    "cares": "Answers support email herself between other jobs and wants to hand it to two colleagues without losing track. Has half an hour, no patience for marketing copy, and reads the pricing and security pages before anything else. Wants to know what it costs per person, whether sign-in can use the company's Google accounts, and whether the vendor has a SOC 2 report she can show her boss."
+  },
+  "goal": "Find out how long an agent stays signed in before having to sign in again.",
+  "writes": "read-only",
+  "screen": {
+    "route": "/docs.html",
+    "title": "Documentation",
+    "ariaHead": "    - heading \"Documentation\" [level=1]\n    - paragraph: Guides for admins and agents.\n    - list:\n      - listitem:\n        - link \"Getting started\":\n          - /url: /docs-getting-started.html\n      - listitem:\n        - link \"Single sign-on and sessions\":\n          - /url: /docs-sso.html\n      - listitem:\n        - link \"Reports and exports\":\n          - /url: /docs-reports.html\n      - listitem:\n        - link \"API\":\n          - /url: /docs-api.html\n  - contentinfo:\n    - generic:\n      - generic:\n        - strong: Product\n        - list:\n          - listitem:\n            - link \"Overview\":\n              - /url: /product.html\n          - listitem:\n            - link \"Pricing\":\n              - /url: /pricing.html\n          - listitem:\n            - link \"Docs\":\n              - /url: /docs.html\n          - listitem:\n            - link \"Single sign-on\":\n              - /url: /docs-sso.html\n      - generic:\n        - strong: Company\n        - list:\n          - listitem:\n            - link \"About\":\n              - /url: /about.html\n          - listitem:\n            - link \"Careers\":\n              - /url: /careers.html\n          - listitem:\n            - link \"Contact\":\n              - /url: /contact.html\n      - generic:\n        - strong: Trust\n        - list:\n          - listitem:\n            - link \"Security\":\n              - /url: /security.html\n          - listitem:\n            - link \"Status\":\n              - /url: /status.html\n          - listitem:\n            - link \"Privacy\":\n              - /url: /privacy.html\n      - generic:\n        - strong: Elsewhere\n        - list:\n          - listitem:",
+    "alerts": [],
+    "failureText": null
+  },
+  "layout": [
+    "not measured: the executor holds the browser, so there are no layout facts"
+  ],
+  "controls": [
+    {
+      "id": "c00",
+      "kind": "link",
+      "name": "Lumen Helpdesk",
+      "region": "banner"
+    },
+    {
+      "id": "c01",
+      "kind": "link",
+      "name": "Product",
+      "region": "navigation"
+    },
+    {
+      "id": "c02",
+      "kind": "link",
+      "name": "Pricing",
+      "region": "navigation"
+    },
+    {
+      "id": "c03",
+      "kind": "link",
+      "name": "Docs",
+      "region": "navigation"
+    },
+    {
+      "id": "c04",
+      "kind": "link",
+      "name": "Contact",
+      "region": "navigation"
+    },
+    {
+      "id": "c05",
+      "kind": "link",
+      "name": "Sign in",
+      "region": "navigation"
+    },
+    {
+      "id": "c06",
+      "kind": "link",
+      "name": "Start a trial",
+      "region": "banner"
+    },
+    {
+      "id": "c07",
+      "kind": "link",
+      "name": "Getting started",
+      "region": "main"
+    },
+    {
+      "id": "c08",
+      "kind": "link",
+      "name": "Single sign-on and sessions",
+      "region": "main"
+    },
+    {
+      "id": "c09",
+      "kind": "link",
+      "name": "Reports and exports",
+      "region": "main"
+    },
+    {
+      "id": "c10",
+      "kind": "link",
+      "name": "API",
+      "region": "main"
+    },
+    {
+      "id": "c11",
+      "kind": "link",
+      "name": "Overview",
+      "region": "contentinfo"
+    },
+    {
+      "id": "c12",
+      "kind": "link",
+      "name": "Single sign-on",
+      "region": "contentinfo"
+    },
+    {
+      "id": "c13",
+      "kind": "link",
+      "name": "About",
+      "region": "contentinfo"
+    },
+    {
+      "id": "c14",
+      "kind": "link",
+      "name": "Careers",
+      "region": "contentinfo"
+    },
+    {
+      "id": "c15",
+      "kind": "link",
+      "name": "Security",
+      "region": "contentinfo"
+    },
+    {
+      "id": "c16",
+      "kind": "link",
+      "name": "Status",
+      "region": "contentinfo"
+    },
+    {
+      "id": "c17",
+      "kind": "link",
+      "name": "Privacy",
+      "region": "contentinfo"
+    }
+  ],
+  "recent": [
+    {
+      "step": 1,
+      "control": "link \"Sign in\"",
+      "outcome": "went to /app.html"
+    },
+    {
+      "step": 2,
+      "control": "link \"Docs\"",
+      "outcome": "went to /docs.html"
+    }
+  ],
+  "visited": [
+    {
+      "route": "/",
+      "arrivals": 1,
+      "last": {
+        "control": "link \"Sign in\"",
+        "outcome": "went to /app.html"
+      }
+    },
+    {
+      "route": "/app.html",
+      "arrivals": 1,
+      "last": {
+        "control": "link \"Docs\"",
+        "outcome": "went to /docs.html"
+      }
+    },
+    {
+      "route": "/docs.html",
+      "arrivals": 1
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "persona": {
+    "name": "Maya Chen",
+    "role": "Office manager choosing a helpdesk tool for a nine-person company",
+    "cares": "Answers support email herself between other jobs and wants to hand it to two colleagues without losing track. Has half an hour, no patience for marketing copy, and reads the pricing and security pages before anything else. Wants to know what it costs per person, whether sign-in can use the company's Google accounts, and whether the vendor has a SOC 2 report she can show her boss."
+  },
+  "goal": "Find out how long an agent stays signed in before having to sign in again.",
+  "writes": "read-only",
+  "screen": {
+    "route": "/",
+    "title": "Support that answers itself.",
+    "ariaHead": "    - heading \"Support that answers itself.\" [level=1]\n    - paragraph: Lumen Helpdesk turns your inbox into a queue your whole team can see, with a knowledge base that writes its own first drafts.\n    - paragraph:\n      - link \"See the product\":\n        - /url: /product.html\n      - link \"Pricing\":\n        - /url: /pricing.html\n    - generic:\n      - generic:\n        - heading \"Shared inbox\" [level=3]\n        - paragraph: Every channel in one queue with owners, due dates and SLAs.\n      - generic:\n        - heading \"Knowledge base\" [level=3]\n        - paragraph: Articles drafted from resolved tickets, reviewed before they go live.\n      - generic:\n        - heading \"Reports\" [level=3]\n        - paragraph: First-response time, backlog age and CSAT by team.\n    - generic:\n      - heading \"Loved by small teams\" [level=2]\n      - paragraph: Used by 1,200 support teams, most of them under ten people.\n  - contentinfo:\n    - generic:\n      - generic:\n        - strong: Product\n        - list:\n          - listitem:\n            - link \"Overview\":\n              - /url: /product.html\n          - listitem:\n            - link \"Pricing\":\n              - /url: /pricing.html\n          - listitem:\n            - link \"Docs\":\n              - /url: /docs.html\n          - listitem:\n            - link \"Single sign-on\":\n              - /url: /docs-sso.html\n      - generic:\n        - strong: Company\n        - list:\n          - listitem:\n            - link \"About\":\n              - /url: /about.html\n          - listitem:\n            - link \"Careers\":\n              - /url: /careers.html\n          - listitem:\n            - link \"Contact\":\n              - /url: /contact.html\n      - generic:\n        - strong: Trust\n        - list:\n          - listitem:\n            - link \"Security\":\n              - /url: /security.html\n          - listitem:\n            - link \"Status\":\n              - /url: /status.html\n          - listitem:\n            - link \"Privacy\":",
+    "alerts": [],
+    "failureText": null
+  },
+  "layout": [
+    "not measured: the executor holds the browser, so there are no layout facts"
+  ],
+  "controls": [
+    {
+      "id": "c00",
+      "kind": "link",
+      "name": "Lumen Helpdesk",
+      "region": "banner"
+    },
+    {
+      "id": "c01",
+      "kind": "link",
+      "name": "Product",
+      "region": "navigation"
+    },
+    {
+      "id": "c02",
+      "kind": "link",
+      "name": "Pricing",
+      "region": "navigation"
+    },
+    {
+      "id": "c03",
+      "kind": "link",
+      "name": "Docs",
+      "region": "navigation"
+    },
+    {
+      "id": "c04",
+      "kind": "link",
+      "name": "Contact",
+      "region": "navigation"
+    },
+    {
+      "id": "c05",
+      "kind": "link",
+      "name": "Sign in",
+      "region": "navigation"
+    },
+    {
+      "id": "c06",
+      "kind": "link",
+      "name": "Start a trial",
+      "region": "banner"
+    },
+    {
+      "id": "c07",
+      "kind": "link",
+      "name": "See the product",
+      "region": "main"
+    },
+    {
+      "id": "c08",
+      "kind": "link",
+      "name": "Overview",
+      "region": "contentinfo"
+    },
+    {
+      "id": "c09",
+      "kind": "link",
+      "name": "Single sign-on",
+      "region": "contentinfo"
+    },
+    {
+      "id": "c10",
+      "kind": "link",
+      "name": "About",
+      "region": "contentinfo"
+    },
+    {
+      "id": "c11",
+      "kind": "link",
+      "name": "Careers",
+      "region": "contentinfo"
+    },
+    {
+      "id": "c12",
+      "kind": "link",
+      "name": "Security",
+      "region": "contentinfo"
+    },
+    {
+      "id": "c13",
+      "kind": "link",
+      "name": "Status",
+      "region": "contentinfo"
+    },
+    {
+      "id": "c14",
+      "kind": "link",
+      "name": "Privacy",
+      "region": "contentinfo"
+    }
+  ],
+  "recent": [],
+  "visited": [
+    {
+      "route": "/",
+      "arrivals": 1
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+node_modules/
+*.log
+*.tsbuildinfo
+.eslintcache
+.env
+.env.*
+!.env.example
+
+# Run output (PERSONA_DRIVE_OUT, default ./runs)
+runs/
+
+# Playwright MCP scratch when Claude Code drives from this checkout
+.playwright-mcp/
+
+# Claude Code demo session scratch
+demo/claude-code-session/stderr.log

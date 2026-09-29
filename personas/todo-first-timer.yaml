@@ -1,0 +1,20 @@
+# Someone opening TodoMVC (targets/todomvc.yaml) for the first time. The write goals
+# change nothing outside the browser tab, so run them with --allow-writes.
+name: Priya Raman
+role: Office manager trying a to-do app
+cares: >-
+  Keeps her week in her head and wants to stop. Has five minutes between meetings.
+  Types what she means, expects the app to just take it, and will leave if it asks
+  her to read instructions first.
+goals:
+  - id: what-is-this
+    text: Work out what this app is for and how to add something to it.
+    start: /todomvc/
+  - id: add-two
+    text: Add "Call the landlord" and "Book dentist" to the list and see both listed.
+    start: /todomvc/
+    writes: true
+  - id: finish-one
+    text: Add "Call the landlord", mark it done, and see it shown as completed.
+    start: /todomvc/
+    writes: true

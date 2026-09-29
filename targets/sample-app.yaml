@@ -1,0 +1,11 @@
+# The bundled sample site (sample-app/): `node sample-app/serve.mjs` serves it on :3000,
+# and so does the compose `sample-app` service. Static pages plus a small ticket app
+# with a few deliberate flaws for a persona to find.
+name: sample-app
+baseUrl: http://localhost:3000
+main: main#main
+failureTexts:
+  - Page not found
+viewport:
+  width: 1280
+  height: 800

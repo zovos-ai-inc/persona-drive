@@ -1,0 +1,15 @@
+{
+  "target": "sample-app",
+  "baseUrl": "http://localhost:3000",
+  "persona": "Tomasz Nowak (Support agent on his second day)",
+  "startedAt": "2026-09-28T17:05:43.518Z",
+  "durationMs": 19556,
+  "jev": {
+    "calls": 29,
+    "inputTokens": 105107,
+    "costUsd": 0.004414494000000001
+  },
+  "notes": [
+    "steps 15 per goal; seed 1; browser local headless"
+  ]
+}

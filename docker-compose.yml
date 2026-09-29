@@ -1,0 +1,47 @@
+# docker compose run --rm persona-drive run --target targets/sample-app.yaml --persona personas/first-time-buyer.yaml
+#
+# `sample-app` serves the bundled site on :3000 and owns the network namespace; the
+# other services join it, so `localhost:3000` is the sample site inside every container
+# and a target file needs no rewriting. Runs land in ./runs. Profile `watch` adds
+# `browser`: a headed Chromium on a virtual display (noVNC at http://localhost:6080/vnc.html)
+# offered as a Playwright browser server on :3100; set PERSONA_DRIVE_BROWSER_WS to use it.
+# No GPU is needed for any of this.
+services:
+  sample-app:
+    build: .
+    image: persona-drive
+    entrypoint: ['node', 'sample-app/serve.mjs', '3000']
+    ports:
+      - '3000:3000'
+      - '6080:6080'
+    # Your own site on the host: --base http://host.docker.internal:<port>
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+
+  persona-drive:
+    build: .
+    image: persona-drive
+    network_mode: 'service:sample-app'
+    depends_on:
+      - sample-app
+    environment:
+      TYPESAFE_API_KEY: ${TYPESAFE_API_KEY:?set TYPESAFE_API_KEY in .env}
+      PERSONA_DRIVE_OUT: /runs
+      # ws://localhost:3100/ once the watch profile's browser is up
+      PERSONA_DRIVE_BROWSER_WS: ${PERSONA_DRIVE_BROWSER_WS:-}
+    volumes:
+      - ./runs:/runs
+      - ./personas:/app/personas
+      - ./targets:/app/targets
+    # Chromium needs a larger /dev/shm than Docker's 64 MB default.
+    shm_size: 1g
+
+  browser:
+    profiles: ['watch']
+    build: .
+    image: persona-drive
+    network_mode: 'service:sample-app'
+    depends_on:
+      - sample-app
+    entrypoint: ['/app/docker/browser.sh']
+    shm_size: 1g

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Reports · Lumen Helpdesk</title><link rel="stylesheet" href="/site.css"></head>
+<body>
+<main id="main">
+<h1>Reports</h1>
+<p class="lead">First-response time, backlog age and CSAT for the last 30 days.</p>
+<div class="two">
+  <div class="card"><h3>First response</h3><p class="price">1h 42m</p><p class="muted">median, down 12% on last month</p></div>
+  <div class="card"><h3>Backlog age</h3><p class="price">2.3 days</p><p class="muted">mean age of open tickets</p></div>
+</div>
+<p><button id="export" class="primary">Export CSV</button></p>
+<div id="err" class="alert error" role="alert" hidden>The export could not be started. Try again later.</div>
+</main>
+<script src="/chrome.js"></script>
+<script>
+document.getElementById("export").addEventListener("click", async () => {
+  const res = await fetch("/api/export", { method: "POST" })
+  if (!res.ok) {
+    document.getElementById("err").hidden = false
+    // A bug the sample keeps on purpose: the handler reads a field that is not there.
+    const body = await res.json()
+    console.log(body.job.id)
+  }
+})
+</script>
+</body>
+</html>

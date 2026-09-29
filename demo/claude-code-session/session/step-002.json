@@ -1,0 +1,210 @@
+{
+  "persona": {
+    "name": "Maya Chen",
+    "role": "Office manager choosing a helpdesk tool for a nine-person company",
+    "cares": "Answers support email herself between other jobs and wants to hand it to two colleagues without losing track. Has half an hour, no patience for marketing copy, and reads the pricing and security pages before anything else. Wants to know what it costs per person, whether sign-in can use the company's Google accounts, and whether the vendor has a SOC 2 report she can show her boss."
+  },
+  "goal": "Find out how long an agent stays signed in before having to sign in again.",
+  "writes": "read-only",
+  "screen": {
+    "route": "/app.html",
+    "title": "Tickets",
+    "ariaHead": "    - heading \"Tickets\" [level=1]\n    - generic:\n      - generic:\n        - text: Search\n        - searchbox \"Search\"\n      - generic:\n        - text: Status\n        - combobox \"Status\":\n          - option \"All\" [selected]\n          - option \"Open\"\n          - option \"Waiting\"\n          - option \"Overdue\"\n          - option \"Closed\"\n      - button \"New ticket\"\n      - link \"Reports\":\n        - /url: /reports.html\n    - table \"Tickets\":\n      - rowgroup:\n        - row:\n          - columnheader \"Ticket\"\n          - columnheader \"Title\"\n          - columnheader \"Status\"\n          - columnheader \"Due\"\n          - columnheader\n      - rowgroup:\n        - row:\n          - cell \"TCK-1039\"\n          - cell \"Cannot reset password from the mobile app\"\n          - cell \"Open\"\n          - cell \"Tomorrow\"\n          - cell:\n            - link \"Open TCK-1039\":\n              - /url: /ticket.html?id=TCK-1039\n              - text: Open\n        - row:\n          - cell \"TCK-1040\"\n          - cell \"Invoice for March shows the wrong VAT number\"\n          - cell \"Waiting\"\n          - cell \"In 3 days\"\n          - cell:\n            - link \"Open TCK-1040\":\n              - /url: /ticket.html?id=TCK-1040\n              - text: Open\n        - row:\n          - cell \"TCK-1041\"\n          - cell \"Export to CSV includes closed tickets even when the filter says open only\"\n          - cell \"Overdue\"\n          - cell \"2 days ago\"\n          - cell:\n            - link \"Open TCK-1041\":\n              - /url: /ticket.html?id=TCK-1041\n              - text: Open\n        - row:\n          - cell \"TCK-1042\"\n          - cell \"SSO login loops back to the sign-in page for one user\"\n          - cell \"Open\"\n          - cell \"Today\"\n          - cell:\n            - link \"Open TCK-1042\":\n              - /url: /ticket.html?id=TCK-1042",
+    "alerts": [],
+    "failureText": null
+  },
+  "layout": [
+    "not measured: the executor holds the browser, so there are no layout facts"
+  ],
+  "controls": [
+    {
+      "id": "c00",
+      "kind": "link",
+      "name": "Lumen Helpdesk",
+      "region": "banner"
+    },
+    {
+      "id": "c01",
+      "kind": "link",
+      "name": "Product",
+      "region": "navigation"
+    },
+    {
+      "id": "c02",
+      "kind": "link",
+      "name": "Pricing",
+      "region": "navigation"
+    },
+    {
+      "id": "c03",
+      "kind": "link",
+      "name": "Docs",
+      "region": "navigation"
+    },
+    {
+      "id": "c04",
+      "kind": "link",
+      "name": "Contact",
+      "region": "navigation"
+    },
+    {
+      "id": "c05",
+      "kind": "link",
+      "name": "Sign in",
+      "region": "navigation"
+    },
+    {
+      "id": "c06",
+      "kind": "link",
+      "name": "Start a trial",
+      "region": "banner"
+    },
+    {
+      "id": "c07",
+      "kind": "searchbox",
+      "name": "Search",
+      "region": "main"
+    },
+    {
+      "id": "c08",
+      "kind": "combobox",
+      "name": "Status",
+      "region": "main"
+    },
+    {
+      "id": "c09",
+      "kind": "button",
+      "name": "New ticket",
+      "region": "main"
+    },
+    {
+      "id": "c10",
+      "kind": "link",
+      "name": "Reports",
+      "region": "main"
+    },
+    {
+      "id": "c11",
+      "kind": "link",
+      "name": "Open TCK-1039",
+      "region": "main"
+    },
+    {
+      "id": "c12",
+      "kind": "link",
+      "name": "Open TCK-1040",
+      "region": "main"
+    },
+    {
+      "id": "c13",
+      "kind": "link",
+      "name": "Open TCK-1041",
+      "region": "main"
+    },
+    {
+      "id": "c14",
+      "kind": "link",
+      "name": "Open TCK-1042",
+      "region": "main"
+    },
+    {
+      "id": "c15",
+      "kind": "link",
+      "name": "Open TCK-1043",
+      "region": "main"
+    },
+    {
+      "id": "c16",
+      "kind": "link",
+      "name": "Open TCK-1044",
+      "region": "main"
+    },
+    {
+      "id": "c17",
+      "kind": "link",
+      "name": "Open TCK-1045",
+      "region": "main"
+    },
+    {
+      "id": "c18",
+      "kind": "link",
+      "name": "Open TCK-1046",
+      "region": "main"
+    },
+    {
+      "id": "c19",
+      "kind": "link",
+      "name": "Open TCK-1047",
+      "region": "main"
+    },
+    {
+      "id": "c20",
+      "kind": "link",
+      "name": "Open TCK-1048",
+      "region": "main"
+    },
+    {
+      "id": "c21",
+      "kind": "link",
+      "name": "Overview",
+      "region": "contentinfo"
+    },
+    {
+      "id": "c22",
+      "kind": "link",
+      "name": "Single sign-on",
+      "region": "contentinfo"
+    },
+    {
+      "id": "c23",
+      "kind": "link",
+      "name": "About",
+      "region": "contentinfo"
+    },
+    {
+      "id": "c24",
+      "kind": "link",
+      "name": "Careers",
+      "region": "contentinfo"
+    },
+    {
+      "id": "c25",
+      "kind": "link",
+      "name": "Security",
+      "region": "contentinfo"
+    },
+    {
+      "id": "c26",
+      "kind": "link",
+      "name": "Status",
+      "region": "contentinfo"
+    },
+    {
+      "id": "c27",
+      "kind": "link",
+      "name": "Privacy",
+      "region": "contentinfo"
+    }
+  ],
+  "recent": [
+    {
+      "step": 1,
+      "control": "link \"Sign in\"",
+      "outcome": "went to /app.html"
+    }
+  ],
+  "visited": [
+    {
+      "route": "/",
+      "arrivals": 1,
+      "last": {
+        "control": "link \"Sign in\"",
+        "outcome": "went to /app.html"
+      }
+    },
+    {
+      "route": "/app.html",
+      "arrivals": 1
+    }
+  ]
+}

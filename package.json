@@ -1,0 +1,49 @@
+{
+  "name": "@zovos-ai-inc/persona-drive",
+  "version": "0.1.0",
+  "description": "Persona-based browser testing: Jev decides what a named person would do next, Playwright does it, and the run is recorded",
+  "license": "Apache-2.0",
+  "repository": "github:zovos-ai-inc/persona-drive",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "persona-drive": "bin/persona-drive.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "personas",
+    "targets",
+    ".claude"
+  ],
+  "scripts": {
+    "persona-drive": "tsx src/cli.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "node --import tsx --test 'src/**/*.test.ts'"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.63.0",
+    "@typesafe-ai/sdk": "0.6.0",
+    "tsx": "^4.23.15",
+    "yaml": "^2.9.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.2",
+    "eslint": "^10.11.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.12.0",
+    "prettier": "^3.9.9",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.70.1"
+  }
+}

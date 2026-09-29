@@ -1,0 +1,32 @@
+# Someone evaluating the sample site's product before signing up. Every goal is read-only
+# except the last, which sends the contact form (run it with --allow-writes).
+name: Maya Chen
+role: Office manager choosing a helpdesk tool for a nine-person company
+cares: >-
+  Answers support email herself between other jobs and wants to hand it to two
+  colleagues without losing track. Has half an hour, no patience for marketing
+  copy, and reads the pricing and security pages before anything else. Wants to
+  know what it costs per person, whether sign-in can use the company's Google
+  accounts, and whether the vendor has a SOC 2 report she can show her boss.
+goals:
+  - id: pricing
+    text: Find out what the Team plan costs per agent per month and whether it includes single sign-on.
+    start: /
+  - id: session-length
+    text: Find out how long an agent stays signed in before having to sign in again.
+    start: /
+  - id: soc2
+    text: Find out whether the vendor has a SOC 2 report and how to get it.
+    start: /
+  - id: data-picture
+    text: >-
+      Understand where customer data goes: which region it is stored in, and which
+      third parties process it.
+    start: /
+    parts:
+      - The region or regions customer data is stored in.
+      - The list of third parties that process customer data.
+  - id: contact
+    text: Send a message asking for a demo next week.
+    start: /contact.html
+    writes: true

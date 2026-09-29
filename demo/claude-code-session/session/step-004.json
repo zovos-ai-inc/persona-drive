@@ -1,0 +1,152 @@
+{
+  "persona": {
+    "name": "Maya Chen",
+    "role": "Office manager choosing a helpdesk tool for a nine-person company",
+    "cares": "Answers support email herself between other jobs and wants to hand it to two colleagues without losing track. Has half an hour, no patience for marketing copy, and reads the pricing and security pages before anything else. Wants to know what it costs per person, whether sign-in can use the company's Google accounts, and whether the vendor has a SOC 2 report she can show her boss."
+  },
+  "goal": "Find out how long an agent stays signed in before having to sign in again.",
+  "writes": "read-only",
+  "screen": {
+    "route": "/docs-sso.html",
+    "title": "Single sign-on and sessions",
+    "ariaHead": "    - heading \"Single sign-on and sessions\" [level=1]\n    - paragraph: Lumen supports SAML 2.0 and OpenID Connect on the Team and Business plans.\n    - heading \"Session length\" [level=2]\n    - paragraph:\n      - text: An agent session lasts\n      - strong: 12 hours\n      - text: from sign-in, or\n      - strong: 8 hours\n      - text: when your identity provider sets a shorter limit. Administrators can shorten it to as little as 1 hour under Settings → Security.\n    - heading \"Setting it up\" [level=2]\n    - paragraph: Paste your identity provider metadata URL under Settings → Security → Single sign-on and assign the Lumen application to your agents.\n  - contentinfo:\n    - generic:\n      - generic:\n        - strong: Product\n        - list:\n          - listitem:\n            - link \"Overview\":\n              - /url: /product.html\n          - listitem:\n            - link \"Pricing\":\n              - /url: /pricing.html\n          - listitem:\n            - link \"Docs\":\n              - /url: /docs.html\n          - listitem:\n            - link \"Single sign-on\":\n              - /url: /docs-sso.html\n      - generic:\n        - strong: Company\n        - list:\n          - listitem:\n            - link \"About\":\n              - /url: /about.html\n          - listitem:\n            - link \"Careers\":\n              - /url: /careers.html\n          - listitem:\n            - link \"Contact\":\n              - /url: /contact.html\n      - generic:\n        - strong: Trust\n        - list:\n          - listitem:\n            - link \"Security\":\n              - /url: /security.html\n          - listitem:\n            - link \"Status\":\n              - /url: /status.html\n          - listitem:\n            - link \"Privacy\":\n              - /url: /privacy.html\n      - generic:\n        - strong: Elsewhere\n        - list:\n          - listitem:\n            - link \"Community forum\":\n              - /url: https://example.com/lumen\n          - listitem:\n            - link \"hello@example.com\":",
+    "alerts": [],
+    "failureText": null
+  },
+  "layout": [
+    "not measured: the executor holds the browser, so there are no layout facts"
+  ],
+  "controls": [
+    {
+      "id": "c00",
+      "kind": "link",
+      "name": "Lumen Helpdesk",
+      "region": "banner"
+    },
+    {
+      "id": "c01",
+      "kind": "link",
+      "name": "Product",
+      "region": "navigation"
+    },
+    {
+      "id": "c02",
+      "kind": "link",
+      "name": "Pricing",
+      "region": "navigation"
+    },
+    {
+      "id": "c03",
+      "kind": "link",
+      "name": "Docs",
+      "region": "navigation"
+    },
+    {
+      "id": "c04",
+      "kind": "link",
+      "name": "Contact",
+      "region": "navigation"
+    },
+    {
+      "id": "c05",
+      "kind": "link",
+      "name": "Sign in",
+      "region": "navigation"
+    },
+    {
+      "id": "c06",
+      "kind": "link",
+      "name": "Start a trial",
+      "region": "banner"
+    },
+    {
+      "id": "c07",
+      "kind": "link",
+      "name": "Overview",
+      "region": "contentinfo"
+    },
+    {
+      "id": "c08",
+      "kind": "link",
+      "name": "Single sign-on",
+      "region": "contentinfo"
+    },
+    {
+      "id": "c09",
+      "kind": "link",
+      "name": "About",
+      "region": "contentinfo"
+    },
+    {
+      "id": "c10",
+      "kind": "link",
+      "name": "Careers",
+      "region": "contentinfo"
+    },
+    {
+      "id": "c11",
+      "kind": "link",
+      "name": "Security",
+      "region": "contentinfo"
+    },
+    {
+      "id": "c12",
+      "kind": "link",
+      "name": "Status",
+      "region": "contentinfo"
+    },
+    {
+      "id": "c13",
+      "kind": "link",
+      "name": "Privacy",
+      "region": "contentinfo"
+    }
+  ],
+  "recent": [
+    {
+      "step": 1,
+      "control": "link \"Sign in\"",
+      "outcome": "went to /app.html"
+    },
+    {
+      "step": 2,
+      "control": "link \"Docs\"",
+      "outcome": "went to /docs.html"
+    },
+    {
+      "step": 3,
+      "control": "link \"Single sign-on and sessions\"",
+      "outcome": "went to /docs-sso.html"
+    }
+  ],
+  "visited": [
+    {
+      "route": "/",
+      "arrivals": 1,
+      "last": {
+        "control": "link \"Sign in\"",
+        "outcome": "went to /app.html"
+      }
+    },
+    {
+      "route": "/app.html",
+      "arrivals": 1,
+      "last": {
+        "control": "link \"Docs\"",
+        "outcome": "went to /docs.html"
+      }
+    },
+    {
+      "route": "/docs.html",
+      "arrivals": 1,
+      "last": {
+        "control": "link \"Single sign-on and sessions\"",
+        "outcome": "went to /docs-sso.html"
+      }
+    },
+    {
+      "route": "/docs-sso.html",
+      "arrivals": 1
+    }
+  ]
+}

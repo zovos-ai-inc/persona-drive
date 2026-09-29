@@ -1,0 +1,15 @@
+{
+  "target": "sample-app",
+  "baseUrl": "http://localhost:3000",
+  "persona": "Maya Chen (Office manager choosing a helpdesk tool for a nine-person company)",
+  "startedAt": "2026-09-28T17:05:23.801Z",
+  "durationMs": 18997,
+  "jev": {
+    "calls": 31,
+    "inputTokens": 103418,
+    "costUsd": 0.004343556
+  },
+  "notes": [
+    "steps 15 per goal; seed 1; browser local headless"
+  ]
+}

@@ -1,0 +1,7 @@
+# Playwright's hosted TodoMVC: a tiny app anyone can run the write goals against.
+name: todomvc
+baseUrl: https://demo.playwright.dev
+main: .todoapp
+viewport:
+  width: 1280
+  height: 800

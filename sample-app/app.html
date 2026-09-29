@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Tickets · Lumen Helpdesk</title><link rel="stylesheet" href="/site.css"></head>
+<body>
+<main id="main">
+<h1>Tickets</h1>
+<div class="toolbar">
+  <label>Search <input id="q" type="search" placeholder="Ticket id or words in the title"></label>
+  <label>Status <select id="status"><option value="">All</option><option>Open</option><option>Waiting</option><option>Overdue</option><option>Closed</option></select></label>
+  <button id="new" class="primary">New ticket</button>
+  <a class="button" href="/reports.html">Reports</a>
+</div>
+<div id="created" class="alert" role="alert" hidden></div>
+<table aria-label="Tickets"><thead><tr><th>Ticket</th><th>Title</th><th>Status</th><th>Due</th><th></th></tr></thead><tbody id="rows"></tbody></table>
+<dialog id="dlg" aria-labelledby="dlg-title">
+  <h2 id="dlg-title">New ticket</h2>
+  <form id="form" method="dialog">
+    <label for="title">Title</label><input id="title" name="title" required>
+    <label for="requester">Requester email</label><input id="requester" name="requester" type="email">
+    <label for="priority">Priority</label><select id="priority" name="priority"><option>Normal</option><option>High</option></select>
+    <p><button type="button" id="cancel">Cancel</button> <button class="primary" type="submit">Create ticket</button></p>
+  </form>
+</dialog>
+<div class="sync" role="status" aria-busy="true">Syncing mailbox…</div>
+</main>
+<script src="/chrome.js"></script>
+<script src="/tickets.js"></script>
+</body>
+</html>
