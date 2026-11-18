@@ -4,8 +4,9 @@ import { join } from 'node:path'
 
 import {
   TypeSafeClient,
+  type ChoiceQuestion,
   type EntryType,
-  type Questions,
+  type NoulQuestion,
   type SystemOneResult,
 } from '@typesafe-ai/sdk'
 
@@ -16,6 +17,11 @@ import { typesafeApiKey } from './config.ts'
 const USD_PER_INPUT_TOKEN = 0.042 / 1_000_000
 /** Our cap on state size; the API's hard limit is 32k tokens. */
 const MAX_STATE_TOKENS = 20_000
+
+/** Questions keyed by answer name. The harness asks only Noul and Choice questions, so every answer is an `Answer`. */
+export interface JudgeQuestions {
+  [name: string]: NoulQuestion | ChoiceQuestion
+}
 
 /** Thrown once a run's spend passes its budget; the loop stops on it. */
 export class BudgetExceededError extends Error {}
@@ -53,8 +59,8 @@ export class JevClient {
     return { calls: this.calls, inputTokens: this.inputTokens, costUsd: this.cost() }
   }
 
-  async judge<Q extends Questions>(
-    state: EntryType,
+  async judge<Q extends JudgeQuestions>(
+    state: NonNullable<EntryType>,
     questions: Q,
     { label }: { label: string },
   ): Promise<SystemOneResult<Q>> {
@@ -72,7 +78,8 @@ export class JevClient {
     const started = performance.now()
     const result = await this.client.systemOne({ state, questions })
     const ms = Math.round(performance.now() - started)
-    this.inputTokens += result.usage.input_tokens
+    // Count our own estimate when the API leaves usage unreported, so the budget still binds.
+    this.inputTokens += result.usage.input_tokens ?? stateTokensEst
     this.calls++
     appendFileSync(
       this.logPath,
