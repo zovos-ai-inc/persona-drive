@@ -1,4 +1,6 @@
-import type { EntryType, NoulQuestion, Questions } from '@typesafe-ai/sdk'
+import type { EntryType, NoulQuestion } from '@typesafe-ai/sdk'
+
+import type { JudgeQuestions } from './jev.ts'
 
 /**
  * One Jev call per step. A Choice `next` over the screen's controls (a native
@@ -130,13 +132,16 @@ export function partQuestion(part: string): NoulQuestion {
 }
 
 /** The step's state plus one `control_<id>` per control in `ask` (the destructive question's field). */
-export function driveState(s: DriveState, ask: ReadonlySet<string>): EntryType {
+export function driveState(
+  s: DriveState,
+  ask: ReadonlySet<string>,
+): NonNullable<EntryType> {
   const fields = Object.fromEntries(
     s.controls
       .filter((c) => ask.has(c.id))
       .map((c) => [`control_${c.id}`, driveControlText(c)]),
   )
-  return JSON.parse(JSON.stringify({ ...s, ...fields })) as EntryType
+  return JSON.parse(JSON.stringify({ ...s, ...fields })) as NonNullable<EntryType>
 }
 
 /**
@@ -156,11 +161,11 @@ export function driveQuestions(
     dialog?: boolean
     parts?: Readonly<Record<string, string>>
   } = {},
-): Questions {
+): JudgeQuestions {
   const options = parts
     ? Object.fromEntries(Object.entries(DRIVE_OPTIONS).filter(([id]) => id !== 'done'))
     : DRIVE_OPTIONS
-  const questions: Questions = {
+  const questions: JudgeQuestions = {
     next: {
       type: 'choice',
       instructions: {
